@@ -16,4 +16,4 @@ mysql:
   environment:
     - MYSQL_ROOT_PASSWORD=sitebuilding
     - MYSQL_DATABASE=sitebuilding
-    - MYSQL_ROOT_HOST=%
+    - MYSQL_ROOT_HOST=sitebuilding
