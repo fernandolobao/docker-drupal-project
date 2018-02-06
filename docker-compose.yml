@@ -1,0 +1,19 @@
+php:
+  container_name: site-building
+  build: ./.docker/site
+  ports:
+    - "80:80"
+    - "443:443"
+  volumes:
+    - .:/app
+  links:
+    - mysql
+mysql:
+  container_name: site-building-mysql
+  image: mysql:5.7
+  ports:
+    - "3307:3306"
+  environment:
+    - MYSQL_ROOT_PASSWORD=sitebuilding
+    - MYSQL_DATABASE=sitebuilding
+    - MYSQL_ROOT_HOST=%
