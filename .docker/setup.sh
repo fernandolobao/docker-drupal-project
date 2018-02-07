@@ -10,3 +10,4 @@ docker build -f ./.docker/site/Dockerfile -t site-building ./
 docker run -d -p 3306:3306  --name site-building-mysql mysql:latest
 docker run -d -p 8000:8000 -i -t -v /app:/app --link site-building-mysql:mysql --name site-building site-building-site:latest
 docker run -d -p 88:88 -i -t -v ./:/app --name site-building site-building-site:latest
+echo 'não pod c'

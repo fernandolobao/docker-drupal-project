@@ -6,3 +6,4 @@ for item in $(find /var/lib/docker/containers/ -type f -name '*.log') ;do trunca
 service docker start
 docker start site-building-mysql
 docker start site-building
+echo 'qual é'

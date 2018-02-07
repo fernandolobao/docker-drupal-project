@@ -1,4 +1,4 @@
-.PHONY: up run in stop clean build
+.PHONY: up run in stop clean build install
 
 build:
 	docker-compose build
