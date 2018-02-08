@@ -12,8 +12,9 @@ mysql:
   container_name: site-building-mysql
   image: mysql:5.7
   ports:
-    - "3307:3306"
+    - "3306:3306"
+  volumes:
+    - ./.docker/mysql:/var/lib/mysql
   environment:
-    - MYSQL_ROOT_PASSWORD=sitebuilding
-    - MYSQL_DATABASE=sitebuilding
-    - MYSQL_ROOT_HOST=sitebuilding
+    - MYSQL_ROOT_PASSWORD=123
+    - MYSQL_DATABASE=dbname
