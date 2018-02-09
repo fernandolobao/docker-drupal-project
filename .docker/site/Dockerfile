@@ -7,9 +7,9 @@ WORKDIR /app/src
 
 RUN a2enmod rewrite
 RUN apt-get update -yq
+RUN apt-get install -y apt-utils
 RUN apt-get install vim -y
 RUN apt-get install wget -y
-RUN apt-get install -y apt-utils
 RUN apt-get install -y git
 
 # install the PHP extensions we need
